@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    char a[1002];
+    cin>>a;
+    if(a[0]>90)
+        a[0]-=32;
+    cout<<a<<"\n";
+    return 0;
+}

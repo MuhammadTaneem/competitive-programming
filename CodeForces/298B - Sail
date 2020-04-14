@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,x,y,xx,yy,e=0,w=0,s=0,n=0,el=0,wl=0,sl=0,nl=0,d=1;
+    scanf("%d%d%d%d%d",&t,&x,&y,&xx,&yy);
+    string ss;
+    cin>>ss;
+    int tx,ty;
+    tx=abs(x-xx);
+    ty=abs(y-yy);
+    if(x<xx)el=tx;
+    else wl=tx;
+    if(y<yy)nl=ty;
+    else sl=ty;
+    for(int i=0;i<t;i++)
+    {
+        if(ss[i]=='W')w++;
+        else if(ss[i]=='S')s++;
+        else if(ss[i]=='N')n++;
+        else if(ss[i]=='E')e++;
+        if(el<=e&&wl<=w&&nl<=n&&sl<=s)
+        {
+            d=0;
+            printf("%d",1+i);
+            break;
+        }
+    }
+    if(d)printf("-1\n");
+    return 0;
+}
+

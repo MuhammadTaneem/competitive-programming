@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n,v,s=0,m=0;
+    cin>>n>>v;
+    if(n<=v)
+    {
+        cout<<n-1<<endl;
+    }
+    else{
+    s=((n-v)*((n-v)+1))/2;
+    m=(s+v)-1;
+    cout<<m<<endl;
+    }
+ 
+    return 0;
+}

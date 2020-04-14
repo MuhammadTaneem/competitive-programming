@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n,l=0,r=9,lb=11,rb=11,i=0;
+    scanf("%d",&n);
+    char s[n];
+ 
+    char arr[10]={0};
+    while(i<n)
+    { cin>>s[i];
+        if(s[i]=='L')
+        {
+            int j=0;
+            while(arr[j]!=0)
+            {
+                j++;
+            }
+            arr[j]=1;
+ 
+        }
+        else if(s[i]=='R')
+        {
+            int j=9;
+            while(arr[j]!=0)
+            {
+                j--;
+            }
+            arr[j]=1;
+ 
+        }
+        else{
+            int k=s[i]-48;
+            arr[k]=0;
+        }
+        i++;
+    }
+ 
+    printf("%d%d%d%d%d%d%d%d%d%d\n",arr[0],arr[1],arr[2],arr[3],arr[4],arr[5],arr[6],arr[7],arr[8],arr[9]);
+}

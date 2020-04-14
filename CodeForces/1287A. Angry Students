@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+//need to get maximum number of p togerther
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    while(n>0)
+    {
+
+        int t,c=0,sum=0;
+        scanf("%d",&t);
+        char arr[t];
+        cin>>arr;
+        for(int i=0;i<t;i++)
+        {
+            if(arr[i]=='A')//cheak befor p have any a or not ?
+            {
+                c=i+1;//which position is first a;
+                break;
+            }
+        }
+        if(c>0)
+        {
+            int co=0;
+
+            for(int i=c-1;i<=t;i++)//loop start from the first a ;
+            {
+
+                if(arr[i]=='P')
+                {
+                    co++;
+                }
+                else{
+                    if(co>=sum)
+                    {
+                        sum=co;
+
+                    }
+                    co=0;
+                }
+            }
+        }
+        printf("%d\n",sum);
+
+        n--;
+    }
+    return 0;
+}

@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+int prime(int n)
+{
+     int j;
+    if(n<=1) return 0;
+    if(n<=3) return 1;
+
+    if(n%2==0||n%3==0)
+    {
+        return 0;
+    }
+     for(j=5;j*j<=n;j=j+6)
+     {
+         if(n%j==0||n%(j+2)==0)
+         {
+             return 0;
+         }
+     }
+     return 1;
+}
+
+
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        long long int n;
+        scanf("%lld",&n);
+        long long int srt=sqrt(n);
+        if(n==(srt*srt))
+        {
+            if(prime(srt))
+            {
+                printf("YES\n");
+            }
+            else if(prime(srt)==0){
+                printf("NO\n");
+            }
+        }
+        else{
+            printf("NO\n");
+        }
+    }
+
+    return 0;
+}

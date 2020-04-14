@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    while(a--)
+    {
+        long long int b,c;
+        scanf("%lld%lld",&b,&c);
+        if(b<c)
+        {
+            printf("<\n");
+        }
+        else if(b>c)
+        {
+            printf(">\n");
+        }
+        else
+        {
+            printf("=\n");
+        }
+
+
+    }
+    return 0;
+}
+

@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define mx 10005
+vector<int>graph[mx];
+vector<int>result;
+int color[mx];
+bool cycle;
+#define WHITE 0
+#define GRAY 1
+#define BLACK 2
+void dfs(int node){
+
+    color[node] = GRAY;
+    sort(graph[node].begin(), graph[node].end());
+
+    for (int i = graph[node].size() - 1; i >= 0; i--){
+        int next = graph[node][i];
+        if (color[next] == WHITE){
+            dfs(next);
+        }
+        else if (color[next] == GRAY){
+            cycle = true;
+            return ;
+        }
+    }
+
+    color[node] = BLACK;
+    result.push_back(node);
+}
+int main()
+{
+    cycle=false;
+    int node,edge;
+    cin>>node>>edge;
+    for(int i=1;i<=edge;i++){
+        int u,v;
+        cin>>u>>v;
+        graph[u].push_back(v);
+       // graph[v].push_back(u);
+    }
+
+    for(int i=node;i>0;i--){
+            if(color[i]==0)dfs(i);
+
+    }
+
+    if(cycle){
+            printf("Sandro fails.\n");
+            return 0;
+    }
+    for (int i = result.size() - 1; i >= 0; i--){
+            printf("%d ",result[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+

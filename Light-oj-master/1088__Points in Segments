@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    getchar();
+    for(int i=1;i<=t;i++)
+    {
+
+        int l,q;
+        scanf("%d%d",&l,&q);
+        int arr[l];
+        for(int j=0;j<l;j++)
+        {
+            scanf("%d",&arr[j]);
+        }
+        printf("Case %d:\n",i);
+        for(int j=0;j<q;j++)
+        {
+            int fv,lv;
+            scanf("%d%d",&fv,&lv);
+            fv=lower_bound(arr,arr+l,fv)-arr;
+            lv=upper_bound(arr,arr+l,lv)-arr;
+            printf("%d\n",lv-fv);
+        }
+
+    }
+    return 0;
+}
+

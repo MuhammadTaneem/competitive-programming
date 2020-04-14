@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define all(x) (x).begin(),(x).end()
+#define endl "\n"
+#define fr(x) for(int i=0;i<x;i++)
+#define frj(x) for(int j=0;j<x;j++)
+#define frr(x) for(int i=x-1;i>=0;i--)
+long long int nxt()
+{
+    long long int x;
+    cin>>x;
+    return x;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    long long int t=nxt();
+    while(t--)
+    {
+        long long int n=nxt(),k=nxt();
+        if(k*k<=n&&(k%2==n%2)){
+            cout<<"YES"<<endl;
+            continue;
+        }
+        cout<<"NO"<<endl;
+    }
+    return 0;
+}
+

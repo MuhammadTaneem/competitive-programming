@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    for(int i=1;i<=t;i++)
+    {
+        int t1,t2,t3,a,ct[3];
+        scanf("%d%d%d%d%d%d%d",&t1,&t2,&t3,&a,&ct[0],&ct[1],&ct[2]);
+        sort(ct,ct+3);
+        int ctr=(ct[1]+ct[2])/2;
+        int test=t1+t2+t3+a+ctr;
+        //cout<<test<<endl;
+        printf("Case %d: ",i);
+        if(test<60)
+        {
+            printf("F\n");
+        }
+        else if(test<70)
+        {
+            printf("D\n");
+        }
+        else if(test<80)
+        {
+            printf("C\n");
+        }
+        else if(test<90)
+        {
+            printf("B\n");
+        }
+        else{printf("A\n");}
+    }
+    //cout << "Hello world!" << endl;
+    return 0;
+}
+

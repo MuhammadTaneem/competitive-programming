@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,s=29,k=0;
+    cin>>a>>b>>c;
+    k=a>(a>(b>c)?b:c)?a:(b>c)?b:c;
+    if(k%2==1)
+    {
+        k+=1;
+    }
+    if(a%2==1)
+    {
+        a++;
+    }
+    if(b%2==1)
+    {
+        b++;
+    }
+    if(c%2==1)
+    {
+        c++;
+    }
+    s+=(k/2)*3;
+    if(k==c)
+    {
+    }
+    else if(k==b)
+    {
+        s--;
+    }
+    else if(k==a)
+    {
+        s-=2;
+    }
+    cout<<s<<endl;
+    return 0;
+}

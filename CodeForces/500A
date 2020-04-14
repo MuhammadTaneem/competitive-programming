@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define mx 100000
+vector<int>graph[mx];
+bool vis[mx];
+
+ void dfs(int source){
+     vis[source]=true;
+     for(int i=0;i<graph[source].size();i++){
+        int next=graph[source][i];
+        if(!vis[next])dfs(next);
+     }
+ }
+int main()
+{
+    int node,edge;
+    cin>>node>>edge;
+    for(int i=1;i<node;i++){
+        int u,v;
+        cin>>u;//>>v;
+        graph[i].push_back(u+i);
+        //graph[v].push_back(u);
+    }
+    dfs(1);
+    /*for(int i=0;i<node;i++){
+       // if(vis[i])cout<<"visited\n";
+       for(int j=0;j<graph[i].size();j++){
+        cout<<i<<"----"<<graph[i][j]<<" ";
+       }
+
+       cout<<endl;
+
+    }*/
+    if(vis[edge])cout<<"YES\n";
+    else cout<<"NO\n";
+
+    return 0;
+}
+

@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        long long int n,g,b;
+        scanf("%lld%lld%lld",&n,&g,&b);
+         long long int gwd=(n+1)/2;
+         
+        long long int r=gwd/g;
+       
+
+        long long int rr=r;
+        if(gwd%g)
+        {
+           rr++;
+        }
+        if(r==0)
+        {
+            rr=1;
+        }
+        if((g*r)+(b*(rr-1))+(gwd%g)<n)
+        {
+            printf("%lld\n",n);
+        }
+        else{
+            cout<<(g*r)+(b*(rr-1))+(gwd%g)<<"\n";
+        }
+
+       
+
+    }
+
+    return 0;
+}
+

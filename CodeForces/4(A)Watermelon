@@ -1,0 +1,17 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int c;
+    scanf("%d",&c);
+    if((c<3)||(c%2))
+    {
+        printf("NO\n");
+    }
+    else{
+       printf("YES\n");
+    }
+    return 0;
+}

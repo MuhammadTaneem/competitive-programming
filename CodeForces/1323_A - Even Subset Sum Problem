@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int s;
+    scanf("%d",&s);
+    while(s--){
+        int n;
+        scanf("%d",&n);
+        int arr[n];
+        for(int i=0;i<n;i++){
+            scanf("%d",&arr[i]);
+        }
+        if(n==1&&arr[0]%2){
+            printf("-1\n");
+        }
+        else if(arr[0]%2==0){//even
+            printf("1\n1\n");
+        }
+        else if(arr[1]%2==0){//even
+            printf("1\n2\n");
+        }
+        else printf("2\n1 2\n");
+    }
+    return 0;
+}
+ 

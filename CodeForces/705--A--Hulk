@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int a;
+    scanf("%d",&a);
+ 
+ 
+    for(int i=1;i<=a;i++)
+    {
+        if(i%2)
+        {
+          printf("I hate ");
+        }
+        else{
+            printf("I love ");
+        }
+        if(i!=a)
+        {
+            printf("that ");
+        }
+    }
+    printf("it\n");
+    return 0;
+}
+ 

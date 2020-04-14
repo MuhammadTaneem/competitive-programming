@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long int fn(long long int b){
+    //if(b<3)return -1;
+    long long int c=(b/3)*2;
+      c--;
+        if(b%3==2)c++;
+        return c;
+
+}
+
+int main() {
+    int n, caseno = 0, cases;
+    scanf("%d", &cases);
+    for(int i=1;i<=cases;i++){
+            long long int a,b;
+            scanf("%lld%lld",&a,&b);
+            a--;
+            printf("Case %d: %lld\n",i,(fn(b)-fn(a)));
+    }
+    return 0;
+}

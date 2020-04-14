@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,ttk=0;
+    scanf("%d",&n);
+    while(n--)
+    {
+        string tem;
+        cin>>tem;
+        if(tem=="donate")
+        {
+            int tk;
+            scanf("%d",&tk);
+            ttk+=tk;
+        }
+        else{
+            printf("%d\n",ttk);
+        }
+    }
+    return 0;
+}
+

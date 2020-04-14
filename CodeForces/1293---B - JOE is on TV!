@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    double sm=0;
+    while(n>0)
+    {
+        sm+=((double)1/n);
+        n--;
+    }
+    cout<<fixed<<setprecision(12)<<sm<<"\n";
+ 
+}

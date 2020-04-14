@@ -1,0 +1,14 @@
+
+
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    int main()
+    {
+        long long int n,m,a,p,q;
+        scanf("%lld%lld%lld",&n,&m,&a);
+        p=(n+(a-1))/a;
+        q=(m+(a-1))/a;
+        printf("%lld\n",p*q);
+        return 0;
+    }

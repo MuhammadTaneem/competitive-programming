@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int test;
+    scanf("%d",&test);
+    while(test--)
+    {
+        int cou,even=0,odd=0;
+        scanf("%d",&cou);
+        int sum=cou;
+        while(cou--)
+        {
+            int s;
+            scanf("%d",&s);
+            if(s%2)odd++;
+            else even++;
+        }
+        if(even==sum||odd==sum)printf("YES\n");
+        else printf("NO\n");
+    }
+    return 0;
+}

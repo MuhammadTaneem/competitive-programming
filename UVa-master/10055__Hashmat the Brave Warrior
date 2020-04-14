@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    long long int a,b;
+    while(scanf("%lld%;lld",&a,&b)!=EOF)
+    {
+        if(a>b)
+        {
+            long long int t=b;
+            b=a;
+            a=t;
+            //swap(a,b);
+        }
+        printf("%lld\n",b-a);
+
+    }
+    return 0;
+}

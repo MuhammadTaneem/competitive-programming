@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    unsigned long long int l,f;
+    scanf("%lld",&l);
+        l++;
+        if(!(l%2))
+        {
+            printf("-");
+        }
+        printf("%lld\n",(l/2));
+
+
+    return 0;
+}

@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int countElements(vector<int>& arr) {
+        sort(arr.begin(),arr.end());
+        int c=0;
+        int siz=arr.size();
+        for(int i:arr)
+        {
+            if (binary_search(arr.begin(), arr.end(),i+1))c++;
+        }
+       /* for(auto i=arr.begin();i!=arr.end();i++)
+        {
+            int j=*i;
+            j++;
+           if (binary_search(arr.begin(), arr.end(),j))c++;
+           
+        }*/
+        return c;
+    }
+};

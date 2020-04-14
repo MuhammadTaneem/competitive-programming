@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int c,k;
+    scanf("%d%d",&c,&k);
+    int arr[c];
+    for(int i=0;i<c;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    k--;
+    k=arr[k];
+    sort(arr,arr+c);
+    if(k==0)
+    {
+        k=1;
+    }
+   int m=lower_bound(arr,arr+c,k)-arr;
+    printf("%d\n",c-m);
+    return 0;
+}
+

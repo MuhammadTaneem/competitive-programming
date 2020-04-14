@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    long long int t;
+    scanf("%lld",&t);
+    while(t--)
+    {
+        int a;
+        scanf("%d",&a);
+        set<int>st;
+        for(int i=0;i<a;i++)
+        {
+           int val;
+            scanf("%d",&val);
+            st.insert(val);
+ 
+        }
+        cout<<st.size()<<"\n";
+        st.clear();
+    }
+ 
+    return 0;
+}

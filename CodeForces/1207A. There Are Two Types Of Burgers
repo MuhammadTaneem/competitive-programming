@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        int b,bp,cp,bf,c,sum=0;
+        cin>>b>>bp>>cp>>bf>>c;
+        b=b/2;
+        if(b>=(bp+cp))
+        {
+            sum=(bf*bp)+(c*cp);
+        }
+        else if(c>=bf)
+        {
+ 
+            if(b>=cp)
+            {
+                sum+=cp*c;
+                b-=cp;
+                if(b>0){
+                    sum+=b*bf;
+                }
+            }
+            else{
+            sum=c*b;
+            }
+        }
+        else if(bf>c)
+        {
+            if(b>=bp)
+            {
+                sum+=bf*bp;
+                b-=bp;
+                if(b>0){
+                    sum+=b*c;
+                }
+            }
+            else if(b>0){
+            sum=bf*b;
+            }
+ 
+        }
+        cout<<sum<<endl;
+    }
+    return 0;
+}

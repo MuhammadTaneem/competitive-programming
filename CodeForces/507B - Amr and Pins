@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+    double n,a,b,c,d,x;
+    scanf("%lf%lf%lf%lf%lf",&n,&a,&b,&c,&d);
+    x=sqrt(pow(c - a,2)+pow(d - b,2));
+    cout<<ceil(double(x/(n*2)))<<endl;
+    return 0;
+}
+

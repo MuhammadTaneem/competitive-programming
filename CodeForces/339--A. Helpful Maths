@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    string s;
+    cin>>s;
+    int k=s.size()/2;
+    int arr[k];
+    int c=0;
+    for(int i=0;c<=k;i+=2)
+    {
+        arr[c++]=s[i]-48;
+    }
+    sort(arr,arr+k+1);
+    for(int i=0;i<=k;i++)
+    {
+        cout<<arr[i];
+        if(i!=k)
+        {
+            printf("+");
+        }
+    }
+    return 0;
+}
+ 

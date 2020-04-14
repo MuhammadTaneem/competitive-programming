@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using  namespace std;
+int main()
+{
+    int n,m,a,b,taka=0,dst;
+    scanf("%d%d%d%d",&n,&m,&a,&b);
+    if((m*a)<=b)
+    {
+        taka=n*a;
+    }
+    else{
+        dst=n/m;
+        taka+=dst*b;
+        dst*=m;
+        n-=dst;
+        if(b<=(n*a))
+        {
+            taka+=b;
+        }
+        else{
+            taka+=n*a;
+        }
+ 
+ 
+    }
+    printf("%d",taka);
+    return 0;
+}

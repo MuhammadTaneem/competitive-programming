@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+ 
+int main()
+{
+    int t,n;
+    scanf("%d",&t);
+    while(t--)
+    {
+        scanf("%d",&n);
+        n--;
+        printf("%d %d\n",1,n);
+ 
+    }
+    return 0;
+}

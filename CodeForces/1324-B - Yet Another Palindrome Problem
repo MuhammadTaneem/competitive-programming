@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int test;
+    scanf("%d",&test);
+    while(test--)
+    {
+        int cou;
+        bool even=false;
+        scanf("%d",&cou);
+        int arr[cou];
+        int brr[cou];
+        for(int i=0;i<cou;i++)
+        {
+            int val;
+            scanf("%d",&val);
+           // scanf("%d",&brr[i]);
+           arr[i]=val;
+           brr[i]=val;
+        }
+        //sort(arr,arr+cou);
+ 
+        for(int i=0;i<cou-2;i++)
+        {
+ 
+            for(int j=i+2;j<cou;j++)
+            {
+                if(arr[i]==arr[j])
+                {
+                    even=true;
+                        break;
+ 
+                }
+            }
+ 
+        }
+        if(even)printf("YES\n");
+        else printf("NO\n");
+    }
+    return 0;
+}

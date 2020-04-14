@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+int isleapyear(int year)
+{
+    if(year%400==0)
+        return year--;
+    else if(year%100==0)
+        return year;
+    else if(year%4==0)
+        return year--;
+    else
+        return year;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        int day,month,year,year2;
+    scanf("%d%d%d%d",&day,&month,&year,&year2);
+    if(day==29&&month==2)
+    {
+        int lpy,hn,lpy2,hn2;
+        year=isleapyear(year);
+            lpy= (year/4);
+            hn=(year/100);
+            hn-=(hn/4);
+            lpy-=hn;
+
+        year2=isleapyear(year2);
+            lpy2= (year2/4);
+            hn2=(year2/100);
+            hn2-=(hn2/4);
+            lpy2-=hn2;
+
+        printf("Case %d: %d\n",i,(lpy2-lpy));
+    }
+    else {
+        printf("Case %d: %d\n",i,(year2-year));
+    }
+    }
+
+    return 0;
+}
+

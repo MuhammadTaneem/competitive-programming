@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    unsigned n;
+
+    int  a,b,c,d,e,f,mxp,mnpr,ttp=0;
+    scanf("%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f);
+    if(f>=e)
+    {
+        mnpr=(b<c&&b<d)?b:(c<d?c:d);//min value from b,c,d;
+        ///cout<<mnpr<<endl;
+        d-=mnpr;
+        ttp+=(f*mnpr);
+
+        mnpr=(a<d)?a:d;
+        ttp+=(e*mnpr);
+
+
+    }
+    else if(f<e)
+    {
+        mnpr=(a<d)?a:d;
+        ttp+=(e*mnpr);
+        d-=mnpr;
+        mnpr=(b<c&&b<d)?b:(c<d?c:d);
+        ttp+=(f*mnpr);
+
+
+
+    }
+    printf("%d\n",ttp);
+
+
+
+    return 0;
+}

@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    getchar();
+    while(t--)
+    {
+        string month,day;
+        cin>>month>>day;
+        if((day=="SUN")||(day=="MON")||(day=="TUE"))
+        {
+            printf("8\n");
+        }
+        else if(day=="WED")
+        {
+            if((month=="JAN")||(month=="MAR")||(month=="MAY")||(month=="JUL")||(month=="AUG")||(month=="OCT")||(month=="DEC"))
+            {
+                printf("9\n");
+            }
+            else {
+                printf("8\n");
+            }
+        }
+        else if(day=="THU")
+        {
+            if(month=="FEB")
+            {
+                printf("8\n");
+            }
+            else if((month=="JAN")||(month=="MAR")||(month=="MAY")||(month=="JUL")||(month=="AUG")||(month=="OCT")||(month=="DEC"))
+            {
+                printf("10\n");
+            }
+            else {
+                printf("9\n");
+            }
+        }
+        else if(day=="FRI")
+        {
+            if(month=="FEB")
+            {
+                printf("8\n");
+            }
+            else {
+                printf("10\n");
+            }
+        }
+        else if(day=="SAT")
+        {
+            if(month=="FEB")
+            {
+                printf("8\n");
+            }
+            else {
+                printf("9\n");
+            }
+        }
+    }
+    return 0;
+}

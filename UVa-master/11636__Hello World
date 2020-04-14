@@ -1,0 +1,25 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+/// uva probelm number 11636
+int main()
+{
+    int n,fv=1;
+    while(scanf("%d",&n))
+    {
+        if(n<0)
+        {
+            break;
+        }
+        int i=1,q=0;
+        while(n>i)
+        {
+            i+=i;
+            q++;
+        }
+        printf("Case %d: %d\n",fv++,q);
+
+    }
+    return 0;
+}
+

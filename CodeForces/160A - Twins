@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define all(x) (x).begin(),(x).end()
+#define endl "\n"
+#define fr(x) for(int i=x-1;i>=0;i--)
+int nxt()
+{
+    int x;
+    cin>>x;
+    return x;
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    vector<int>v;
+    int t=nxt();
+    int p=t;
+    while(t--)
+    {
+        v.push_back(nxt());
+    }
+    int sum=accumulate(v.begin(), v.end(),0);
+    sort(all(v));
+    //cout<<sum<<endl;
+    int c=0;
+    fr(p)
+    {
+        c+=v[i];
+        if(c>sum/2)
+        {
+            c=p-i;
+            break;
+        }
+
+    }
+    cout<<c<<endl;
+    return 0;
+}

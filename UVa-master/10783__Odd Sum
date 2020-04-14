@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+/// uva 10783
+int main()
+{
+    int n,fv=1;
+    scanf("%d",&n);
+    while(n--)
+    {
+
+        int f,l;
+        scanf("%d%d",&f,&l);
+        if(f%2==0)
+        {
+            f++;
+        }
+        f--;
+        if(l%2)
+        {
+            l++;
+        }
+        f=(f/2)*(f/2);
+        l=(l/2)*(l/2);
+
+        printf("Case %d: %d\n",fv++,l-f);
+
+    }
+    return 0;
+}
+
